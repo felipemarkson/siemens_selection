@@ -32,4 +32,4 @@ jobs:
 
       - name: RunWin
         if: ${{ (matrix.os == 'windows-latest') }}
-        run: .\siemens\bin\unittest.exe
+        run: .\siemens\bin\Release\unittest.exe
