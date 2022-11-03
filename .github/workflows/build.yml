@@ -27,9 +27,9 @@ jobs:
           cmake --build build --config Release
 
       - name: Run
-        if: ${{ !(matrix.os == 'windows-latest') }} # macos fail on clang-actions (why?)
+        if: ${{ !(matrix.os == 'windows-latest') }}
         run: ./siemens/bin/unittest
 
       - name: RunWin
-        if: ${{ (matrix.os == 'windows-latest') }} # macos fail on clang-actions (why?)
-        run: ./siemens/bin/unittest.exe
+        if: ${{ (matrix.os == 'windows-latest') }}
+        run: .\siemens\bin\unittest.exe
