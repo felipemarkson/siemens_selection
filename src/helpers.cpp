@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <string>
 using namespace std;
 using std::string;
 
@@ -13,13 +14,11 @@ string foobaa(int i) {
         return "Baa";
     }
 
-    return std::to_string(i);
+    return to_string(i);
 }
 }  // namespace Ex3
 
 namespace Ex4 {
-string response(string s, string t, int k, int operations, int indx_init) {
-}
 string ConcatERemove(string s, string t, int k) {
     if (s == t) {
         return "sim";
