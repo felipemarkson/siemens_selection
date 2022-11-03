@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <string>
 using namespace std;
 using std::string;
 
@@ -13,7 +14,7 @@ string foobaa(int i) {
         return "Baa";
     }
 
-    return std::to_string(i);
+    return to_string(i);
 }
 }  // namespace Ex3
 
