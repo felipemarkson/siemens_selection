@@ -1,0 +1,30 @@
+# Problem 1
+
+bq # This starts the utility
+rel ABC # In the utility, this specifies data structure.
+di # In the utility, this display the data structure.
+x #Exit the utility.
+
+
+
+# Problem 2
+
+bq # This starts the utility
+rel XYZ # In the utility, this specifies data structure.
+re f # In the utility, this read the first record from the relation.
+re l # In the utility, this read the last record from the relation.
+x #Exit the utility.
+
+
+# Problem 3
+
+bq # This starts the utility
+rel XYZ # In the utility, this specifies data structure.
+key 10 # In the utility, this specifies the key to read.
+re k # In the utility, this read the value in the key.
+re n # In the utility, this read the next value.
+re n # In the utility, this read the next value.
+x #Exit the utility.
+
+
+
