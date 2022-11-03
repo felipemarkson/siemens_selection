@@ -18,12 +18,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Install LLVM and Clang
-        if: ${{ !(matrix.os == 'macos-latest') }} # macos fail on clang-actions (why?)
-        uses: KyleMayes/install-llvm-action@v1
-        with:
-          version: "14.0"
-      
       - name: Install CMake
         uses: lukka/get-cmake@latest
 
@@ -33,4 +27,9 @@ jobs:
           cmake --build build --config Release
 
       - name: Run
+        if: ${{ !(matrix.os != 'windows-latest') }} # macos fail on clang-actions (why?)
         run: ./siemens/bin/unittest
+
+      - name: RunWin
+        if: ${{ !(matrix.os == 'windows-latest') }} # macos fail on clang-actions (why?)
+        run: ./siemens/bin/unittest.exe
