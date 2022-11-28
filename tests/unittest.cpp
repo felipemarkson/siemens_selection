@@ -78,3 +78,66 @@ TEST(Ex4, sSmallerThant) {
     EXPECT_EQ(Ex4::ConcatERemove("blablabcde", "blablablabla", 7), negative);
     EXPECT_EQ(Ex4::ConcatERemove("blablabcde", "blablablabla", 8), positive);
 }
+
+// Test Ex10
+TEST(Ex10, countString) {
+    EXPECT_EQ(Ex10::countStr("\n"), 0);
+    EXPECT_EQ(Ex10::countStr(""), 0);
+    EXPECT_EQ(Ex10::countStr("1"), 1);
+    EXPECT_EQ(Ex10::countStr("2"), 1);
+    EXPECT_EQ(Ex10::countStr("12"), 2);
+    EXPECT_EQ(Ex10::countStr("\t12"), 2);
+    EXPECT_EQ(Ex10::countStr("\n12"), 2);
+    EXPECT_EQ(Ex10::countStr("\n12\t"), 2);
+    EXPECT_EQ(Ex10::countStr("\t12\n"), 2);
+    EXPECT_EQ(Ex10::countStr("abc"), 3);
+    EXPECT_EQ(Ex10::countStr("1234"), 4);
+    EXPECT_EQ(Ex10::countStr("cba"), 3);
+    EXPECT_EQ(Ex10::countStr("tests is awesome\n"), 16);
+
+}
+
+
+
+// Test Ex11
+TEST(Ex11, reverseString) {
+    string msg;
+    
+    msg = "\n";
+    Ex11::reverseStr(msg);
+    EXPECT_EQ(msg, "\n");
+
+    msg = "1";
+    Ex11::reverseStr(msg);
+    EXPECT_EQ(msg, "1");
+
+    msg = "12";
+    Ex11::reverseStr(msg);
+    EXPECT_EQ(msg, "21");
+
+    msg = "123";
+    Ex11::reverseStr(msg);
+    EXPECT_EQ(msg, "321");
+
+    msg = "abc";
+    Ex11::reverseStr(msg);
+    EXPECT_EQ(msg, "cba");
+
+    msg = "abcd";
+    Ex11::reverseStr(msg);
+    EXPECT_EQ(msg, "dcba");
+
+    msg = "abad";
+    Ex11::reverseStr(msg);
+    EXPECT_EQ(msg, "daba");
+
+    msg = "aba";
+    Ex11::reverseStr(msg);
+    EXPECT_EQ(msg, "aba");
+
+    msg = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a arcu a metus vehicula ultrices sed non justo. Pellentesque consequat hendrerit auctor. Integer arcu eros, tristique consectetur dui et, pulvinar posuere nibh. Maecenas laoreet ipsum sed sapien consequat rutrum. Etiam dolor elit, lacinia vitae quam gravida, condimentum bibendum erat. Donec mattis, erat auctor condimentum tincidunt, nisi risus dignissim dolor, in facilisis sapien quam pretium sem. Cras feugiat dui eget scelerisque vehicula. Integer lorem diam, egestas vel imperdiet quis, euismod nec quam.";
+    string reverse_msg = ".mauq cen domsiue ,siuq teidrepmi lev satsege ,maid merol regetnI .alucihev euqsirelecs tege iud taiguef sarC .mes muiterp mauq neipas sisilicaf ni ,rolod missingid susir isin ,tnudicnit mutnemidnoc rotcua tare ,sittam cenoD .tare mudnebib mutnemidnoc ,adivarg mauq eativ ainical ,tile rolod maitE .murtur tauqesnoc neipas des muspi teeroal saneceaM .hbin ereusop ranivlup ,te iud rutetcesnoc euqitsirt ,sore ucra regetnI .rotcua tirerdneh tauqesnoc euqsetnelleP .otsuj non des secirtlu alucihev sutem a ucra a maN .tile gnicsipida rutetcesnoc ,tema tis rolod muspi meroL";
+    Ex11::reverseStr(msg);
+    EXPECT_EQ(msg, reverse_msg);
+
+}

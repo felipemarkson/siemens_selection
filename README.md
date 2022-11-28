@@ -11,12 +11,22 @@
 All functions used in the examples are defined in [helpers.hpp](src/helpers.cpp).
 
 Example 3 is defined in [ex3.cpp](src/ex3.cpp).
-Example 4 is defined in [ex4.cpp](src/ex3.cpp).
-These two examples are built using CMake.
 
-Example 10 is defined in [ex10.txt](src/ex10.txt) and there is no need to build.
+Example 4 is defined in [ex4.cpp](src/ex4.cpp).
 
-### Building ex3.cpp and ex4.cpp
+Example 5 can be found on [unittest.cpp](tests/unittest.cpp) and is running with the tests.
+
+Example 6 can be found on [ex6.sql](src/ex6.sql) and there is no need to build.
+
+Example 8 can be found on [ex8.sql](src/ex8.sql) and there is no need to build.
+
+Example 9 is defined in [ex9.txt](src/ex9.txt) and there is no need to build.
+
+Example 10 is defined in [ex10.cpp](src/ex10.cpp).
+
+Example 11 is defined in [ex11.cpp](src/ex11.cpp).
+
+### Building ex3.cpp, ex4.cpp, ex10.cpp, and ex11.cpp
 
 If you are using a Unix-based system with Shell Script, you can just run the [BuildAndRun.sh](BuildAndRun.sh).
 
