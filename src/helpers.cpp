@@ -20,13 +20,16 @@ string foobaa(int i) {
 
 namespace Ex4 {
 string ConcatERemove(string s, string t, int k) {
+    string positive = "yes";
+    string negative = "no";
+
     if (s == t) {
-        return "sim";
+        return positive;
     }
 
     auto operations = (s.length() > t.length()) ? s.length() - t.length() : t.length() - s.length();
     if (operations > k) {
-        return "não";
+        return negative;
     }
 
     string* small = (s.length() < t.length()) ? &s : &t;
@@ -37,10 +40,10 @@ string ConcatERemove(string s, string t, int k) {
             operations += 2;
         }
         if (operations > k) {
-            return "não";
+            return negative;
         }
     }
-    return "sim";
+    return positive;
 }
 
 }  // namespace Ex4
