@@ -35,6 +35,14 @@ target_link_libraries(ex3 Helpers)
 add_executable(ex4 src/ex4.cpp)
 target_link_libraries(ex4 Helpers)
 
+# Ex10
+add_executable(ex10 src/ex10.cpp)
+target_link_libraries(ex10 Helpers)
+
+# Ex11
+add_executable(ex11 src/ex11.cpp)
+target_link_libraries(ex11 Helpers)
+
 # Tests
 add_executable(unittest tests/unittest.cpp)
 target_link_libraries(unittest GTest::gtest_main)
